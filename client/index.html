@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Socket Chatroom</title>
+        <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
         <script src="script.js" type="module"></script>
         <style>
             /* Basic Reset */
@@ -40,6 +41,20 @@
                 margin-bottom: 20px;
                 height: 300px;
                 overflow-y: auto; /* Enable scrolling for long message history */
+            }
+
+            #message-history .message {
+                padding: 8px;
+                border-radius: 4px;
+            }
+    
+            /* Define alternating colors */
+            #message-history .message:nth-child(odd) {
+                background-color: #f1f1f1;
+            }
+    
+            #message-history .message:nth-child(even) {
+                background-color: #e0e7ff;
             }
 
             .field {
